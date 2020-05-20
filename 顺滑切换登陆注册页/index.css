@@ -1,0 +1,263 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* 设置背景渐变 */
+html,body{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg,#fbc2eb,#a6c1ee);
+    overflow: hidden;
+}
+/* 卡片，渐变出现 */
+.container{
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    background-color: #cedcf7;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(17, 39, 59, .3);
+    overflow: hidden;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 1s;
+    transform: translate(-50%,-30%);
+    font-family: 'Microsoft YaHei';
+    font-weight: 100;
+}
+.container-show{
+    transform: translate(-50%,-50%);
+    opacity: 1;
+}
+
+/* 登陆盒子 */
+.login-box{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: #cedcf7;
+    z-index: 1;
+    transform-origin: 0 100%;
+    transition: .4s;
+}
+
+/* 标题，添加光效 */
+.title{
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase; /* 大写 */
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: white;
+    text-shadow: 0 0 7px rgba(255, 255, 255, .9);
+    transition: .4s;
+}
+
+/* 输入框效果 */
+.input{
+    width: 400px;
+    height: 45px;
+    position: relative;
+    margin: 40px auto;
+}
+input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 45px;
+    caret-color: black;
+    color: rgba(20, 20, 20, .5);
+    transition: .4s;
+}
+input::-webkit-input-placeholder {
+    color: #ccc;
+}
+input:focus{
+    box-shadow: 0 0 15px rgba(1, 1, 1, .1);
+}
+
+/* 按钮公共 */
+.btn{
+    height: 50px;
+    width: 160px;
+    position: relative;
+    margin: -10px auto;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s;
+    font-size: 20px;
+}
+/* 登陆按钮 */
+.login-btn:hover{
+    color: white;
+    background-color: #57606f;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 切换框公共 */
+.change-box{
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    clip-path: polygon(100% 50%,50% 100%,100% 100%);
+    bottom: 0px;
+    transition: .4s;
+    font-weight: 300;
+}
+/* 去注册按钮背景 */
+.go-register{
+    background-color: rgba(249,241,250, .8);
+}
+/* 切换按钮 */
+.go-btn{
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    font-size: 20px;
+    display: none;
+    color: #888;
+}
+.go-btn:hover{
+    text-shadow: 0 0 3px rgba(255, 255, 255, .8);
+    cursor: pointer;
+}
+
+/* 鼠标滑过卡片样式，标题缩小，输入框上移，按钮变小，切换框和按钮显示 */
+.container:hover .title{
+    font-size: 25px;
+}
+.container:hover input{
+    transform: translate(0,-30%);
+}
+.container:hover .btn{
+    height: 40px;
+    width: 120px;
+    transform: translate(0,-30%);
+    font-size: 15px;
+}
+.container:hover .change-box{
+    height: 200px;
+}
+.container:hover .go-btn{
+    display: block;
+}
+
+
+/* 注册卡片 */
+.register-box{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(249,241,250, .8);
+    transform-origin: 0 100%;  /* 定义旋转点 */
+    transform: rotate(90deg);
+    z-index: 1;
+    transition: .4s;
+}
+.register-box .title{
+    text-shadow: 0 0 10px rgba(200, 200, 200, .8);
+}
+.go-login{
+    background-color: #cedcf7;
+}
+.go-login-btn{
+    color: white;
+}
+.register-box input{
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+.register-box .go-register-btn{
+    color: #1e90ff;
+    background-color: rgba(200, 200, 200, .1);
+    transition: .5s;
+}
+.register-box .register-btn:hover{
+    color: white;
+    background-color: #1e90ff;
+}
+
+
+/* 登陆注册切换效果 */
+.animate_login{
+    transform: rotate(-90deg);
+}
+.animate_register{
+    transform: rotate(0deg);
+}
+
+
+/* 三色按钮公共 */
+.operation-btn{
+    position: absolute;
+    height: 20px;
+    width: 80px;
+    top: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.operation-btn li{
+    list-style: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    margin: 5px;
+    opacity: 0;
+}
+/* 登陆页三色按钮 */
+.login-operation{
+    left: 5px;
+}
+/* 注册页三色按钮 */
+.register-operation{
+    right: 5px;
+}
+
+.red-btn{
+    background-color: red;
+    transition: .3s;
+    transform: translate(0,-50%);
+}
+.yellow-btn{
+    background-color: orange;
+    transition: .6s;
+    transform: translate(0,-50%);
+}
+.green-btn{
+    background-color: rgb(15, 136, 15);
+    transition: .9s;
+    transform: translate(0,-50%);
+}
+
+.container:hover .red-btn{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.container:hover .yellow-btn{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.container:hover .green-btn{
+    opacity: 1;
+    transform: translate(0,0);
+}
