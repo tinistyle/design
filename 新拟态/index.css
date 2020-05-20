@@ -40,9 +40,9 @@ body{
     position: relative;
     margin-bottom: 30px;
 }
-.container .item .img img{
-    width: 50px;
-    transition: width .2s ease-out;
+.container .item .img i{
+    font-size: 50px;
+    transition: font-size .2s ease-out;
 }
 .container .item p{
     color: slategray;
@@ -54,9 +54,9 @@ body{
     inset -18px -18px 30px rgba(255, 255, 255, 1);
     transition: box-shadow .2s ease-out;
 }
-.container .item .img:hover img{
-    width: 40px;
-    transition: width .2s ease-out;
+.container .item .img:hover i{
+    font-size: 40px;
+    transition: font-size .2s ease-out;
 }
 
 

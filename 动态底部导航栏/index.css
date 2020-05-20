@@ -37,14 +37,14 @@ body{
 .nav-bar .active{
     width: 210px;
 }
-.nav-bar .item img{
-    width: 30px;
+.nav-bar .item i{
+    font-size: 30px;
     transform: translate(0,0);
 }
 .nav-bar .item p{
     opacity: 0;
 }
-.nav-bar .active img{
+.nav-bar .active i{
     transform: translate(0,-10px);
 }
 .nav-bar .active p{
