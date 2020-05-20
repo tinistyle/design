@@ -24,9 +24,9 @@ body{
     align-items: center;
     flex-direction: column;
     width: 100px;
-    height: 140px;
     margin: 20px;
 }
+/* 给盒子设置阴影，左上角白(页面背景前提是灰色)，右下角黑，并设置过渡效果 */
 .container .item .img{
     width: 100px;
     height: 100px;
@@ -38,14 +38,16 @@ body{
     background-color: #efeeee;
     transition: box-shadow .2s ease-out;
     position: relative;
+    margin-bottom: 30px;
 }
 .container .item .img img{
-    width: 60px;
+    width: 50px;
     transition: width .2s ease-out;
 }
 .container .item p{
     color: slategray;
 }
+/* 鼠标滑过时收缩外阴影，设置内阴影(顺向黑，逆向白) */
 .container .item .img:hover {
     box-shadow: 0 0 0 rgba(0, 0, 0, .1),0 0 0 rgba(255, 255, 255, 1),
     inset 18px 18px 30px rgba(0, 0, 0, .1),
@@ -53,7 +55,7 @@ body{
     transition: box-shadow .2s ease-out;
 }
 .container .item .img:hover img{
-    width: 50px;
+    width: 40px;
     transition: width .2s ease-out;
 }
 
