@@ -24,7 +24,7 @@ body{
     align-items: center;
     flex-direction: column;
     width: 100px;
-    margin: 20px;
+    margin: 30px;
 }
 /* 给盒子设置阴影，左上角白(页面背景前提是灰色)，右下角黑，并设置过渡效果 */
 .container .item .img{
