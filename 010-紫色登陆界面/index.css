@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-image: linear-gradient(to bottom right,rgb(114,135,254),rgb(130,88,186));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 600px;
+    height: 320px;
+    border-radius: 15px;
+    box-shadow: 0 10px 50px 0 rgb(59, 45, 159);
+    background: rgb(95, 76, 194);
+    display: flex;
+}
+.container .left{
+    background-image: linear-gradient(to bottom right,rgb(118,76,163),rgb(92,103,211));
+    width: 70%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container .left .title{
+    columns: #fff;
+    font-size: 18px;
+}
+.container .left .title span{
+    padding-bottom: 5px;
+    border-bottom: 3px solid rgb(237, 221, 22);
+}
+.container .left .input{
+    padding: 20px 0;
+}
+.container .left .input input{
+    border: 0;
+    background: none;
+    outline: none;
+    color: #fff;
+    margin: 20px 0;
+    padding: 5px;
+    width: 100%;
+    border-bottom: 1px solid rgb(199, 191, 219);
+    transition: 0.2s;
+}
+.container .left .input input:hover{
+    border-bottom-color: #fff;
+}
+::-webkit-input-placeholder{
+    color: rgb(199, 191, 219);
+}
+.container .left .hint{
+    font-size: 14px;
+    color: rgb(199, 191, 219);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.container .left .hint:hover{
+    color: #fff;
+}
+.container .right{
+    width: 30% ;
+    /* height: 100%; */
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .right .register{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 200;
+}
+.container .right .register span{
+    border-bottom: 3px solid rgb(237, 221, 22);
+    padding-bottom: 5px;
+}
+.container .right .action{
+    border: 1px solid rgb(237, 221, 22);
+    width: 45px;
+    height: 45px;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+}
+.container .right .action:hover{
+    background: rgb(237, 221, 22);
+    color: black;
+    transition: 0.2s;
+}
