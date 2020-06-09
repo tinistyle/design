@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text{
+  width: 500px;
+  height: 300px;
+  padding: 30px;
+  background: rgba(0, 0, 0, .2);
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+.text p{
+  font-size: 12px;
+}
+#bgvideo{
+  position: fixed;
+  z-index: -1;
+}
+@media(min-aspect-ratio:16/9){
+  #bgvideo{
+    width: 100%;
+    height: auto;
+  }
+}
+@media(max-aspect-ratio:16/9){
+  #bgvideo{
+    width: auto;
+    height: 100%;
+  }
+}
+/* 移动端时显示图片 */
+@media(max-width:760px){
+  #bgvideo{
+    display: none;
+  }
+  body{
+    background: url('../static/img/back01_cover.jpg');
+    background-size: cover;
+  }
+}
